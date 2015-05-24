@@ -1,8 +1,8 @@
 // An example of how this works. 'this', in any function, is set only at the time the
-// function is invoked and the way it is invoked (i.e. the object invoking it) is crucial.
-// The value of this is set to the object that invokes the function. In the example below,
-// the animal that invokes 'speak' will be the value of 'this' in the function.
-// 'this.name' will then be that animal's name.
+// function is invoked and the way it is invoked (i.e. the object invoking it) is
+// crucial. The value of this is set to the object that invokes the function. In the
+// example below, the animal that invokes 'speak' will be the value of 'this' in the
+// function. 'this.name' will then be that animal's name.
 
 Animal.prototype.speak = function () {
   console.log('My name is ' + this.name + '.');
@@ -16,7 +16,8 @@ function Bear (){
 
   this.feedCubs = function () {
     this.cubs.forEach (function(cub) {
-      // 'this' inside the anonymous function cannot access the outer function’s this, so it is bound to the global window object.
+      // 'this' inside the anonymous function cannot access the outer function’s
+      // this, so it is bound to the global window object.
 
       this.foodSupply -= 1;
       console.log(this.foodSupply);
@@ -37,7 +38,8 @@ hugeBear.cubs.push(weeBear);
 
 mufasa.feedCubs = function () {
   this.cubs.forEach (function(cub) {
-    // We can use 'bind' to set our context of 'this'. In this way, 'this' will hold the expected value when called inside the anonymous function.
+    // We can use 'bind' to set our context of 'this'. In this way, 'this' will
+    // hold the expected value when called inside the anonymous function.
 
     // Another solution is to store the value of 'this' in a variable outside of
     // this forEach. Since the forEach loop closes over the stored variable it will

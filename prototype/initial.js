@@ -14,8 +14,8 @@ function Animal (name) {
   };
 };
 
-// One of the biggest benefits of JavaScript's prototype inheritance style is that you
-// can add properties to a top level prototype and all exisiting and future objects made
-// from that constructor/(has the constructor as its prototype) will have access to the
-// new property. This leads to a nice object oriented and modular way of creating pseudo
-// classes.
+// One of the biggest benefits of JavaScript's prototype inheritance style is
+// that you can add properties to a top level prototype and all exisiting and
+// future objects made from that constructor/(has the constructor as its
+// prototype) will have access to the new property. This leads to a nice object
+// oriented and modular way of creating pseudo classes.

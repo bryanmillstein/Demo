@@ -10,8 +10,8 @@ var banish = king.banishAnimal;
 
 // 'this' does not get defined until the funciton that uses it is invoked.
 // Even though it appears that 'this' is defined in the original 'banishAnimal'
-// function in the king object it is not. When we call 'banish', the value of 'this' is
-// the window.
+// function in the king object it is not. When we call 'banish', the value of
+// 'this' is the window.
 
 
 var king = {

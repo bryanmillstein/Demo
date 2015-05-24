@@ -26,16 +26,21 @@ Capybara.prototype.lounge = function () {
   console.log('I am a Capybara and I lounge in hot tubs.');
 };
 
-// The inherits function sets the prototype of the child to a new parent object. This gives the child access to all of the properties of the parent as well as the parent's entire upstream prototypical chain.
+// The inherits function sets the prototype of the child to a new parent object.
+// This gives the child access to all of the properties of the parent as well as
+// the parent's entire upstream prototypical chain.
 
 var inherits = function (parentClass, childClass) {
   childClass.prototype = new parentClass({});
 };
 
-// Call the inherits function to set the Lion's prototype to an Animal object. This will give all future instantiated Lion's access to the Animal's properties.
+// Call the inherits function to set the Lion's prototype to an Animal object.
+// This will give all future instantiated Lion's access to the Animal's properties.
 
 inherits(Animal, Lion);
 
 
-// Call the inherits function to set the Capybara's prototype to an Animal object. This will give all future instantiated Capybara's access to the Animal's properties.
+// Call the inherits function to set the Capybara's prototype to an Animal object.
+// This will give all future instantiated Capybara's access to the Animal's
+// properties.
 inherits(Animal, Capybara);
