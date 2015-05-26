@@ -14,11 +14,11 @@ Bear.prototype.feedCubs = function () {
 };
 
 Bear.prototype.hunt = function () {
-  // for (var i = 0; i < 10; i ++) {
-  //   this.foodSupply += 1;
-  // };
+  for (var i = 0; i < 10; i ++) {
+    this.foodSupply += 1;
+  };
 
-  // this.returnHome();
+  this.returnHome();
 
 
   // The anonymous function (containing the for loop and the this.returnHome() is
@@ -28,13 +28,13 @@ Bear.prototype.hunt = function () {
   // Once the stack clears, the 'event loop' transfers the callback to the top of
   // the stack.
 
-  setTimeout(function() {
-    for (var i = 0; i < 10; i ++) {
-      this.foodSupply += 1;
-    };
-
-    this.returnHome();
-  }.bind(this), 5000);
+  // setTimeout(function() {
+  //   for (var i = 0; i < 10; i ++) {
+  //     this.foodSupply += 1;
+  //   };
+  //
+  //   this.returnHome();
+  // }.bind(this), 0);
 
 };
 
@@ -45,3 +45,9 @@ Bear.prototype.returnHome = function () {
 Bear.prototype.cubsCry = function () {
   console.log(this.name + '\'s cubs are crying.')
 };
+
+var smokey = new Bear('Smokey');
+
+var babyBear = new Bear('Baby');
+
+smokey.cubs.push(babyBear);

@@ -25,13 +25,10 @@ function Bear (){
   };
 };
 
-// Instaniate a parent Lion.
-var hugeBear = Bear();
+var hugeBear = new Bear();
 
-// Instaniate a child Lion.
-var weeBear = Bear();
+var weeBear = new Bear();
 
-// Add simba to mufasa's children.
 hugeBear.cubs.push(weeBear);
 
 // var that = this;
