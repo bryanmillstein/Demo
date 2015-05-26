@@ -14,24 +14,20 @@ function Lion (name){
   this.name = name;
 };
 
-Lion.prototype.roar = function () {
-  console.log('I am an animal and I can roar.');
-};
-
 function Capybara (name) {
   this.name = name;
 };
 
-Capybara.prototype.lounge = function () {
-  console.log('I am a Capybara and I lounge in hot tubs.');
-};
-
-// The inherits function sets the prototype of the child to a new parent object.
-// This gives the child access to all of the properties of the parent as well as
-// the parent's entire upstream prototypical chain.
+// The inherits function sets the prototype of the child to a new Surrogate object
+// that holds the parent's prototype. This gives the child access to all of the
+// properties of the parent as well as the parent's entire upstream prototypical
+// chain.
 
 var inherits = function (parentClass, childClass) {
-  childClass.prototype = new parentClass({});
+
+  var Surrogate = function(){};
+  Surrogate.prototype = parentClass.prototype;
+  childClass.prototype = new Surrogate();
 };
 
 // Call the inherits function to set the Lion's prototype to an Animal object.
@@ -44,3 +40,11 @@ inherits(Animal, Lion);
 // This will give all future instantiated Capybara's access to the Animal's
 // properties.
 inherits(Animal, Capybara);
+
+Lion.prototype.roar = function () {
+  console.log('I am an animal and I can roar.');
+};
+
+Capybara.prototype.lounge = function () {
+  console.log('I am a Capybara and I lounge in hot tubs.');
+};
