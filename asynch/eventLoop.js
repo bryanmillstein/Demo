@@ -4,7 +4,7 @@ var startCounter = function () {
     console.log('I\'m in the task queue waiting for the busy work to finish!');
 
     busyWork();
-  }, 5000);
+  }, 10000);
 
   console.log('I\'m in the web browser waiting and the rest of the program is running without me!')
 };
@@ -27,4 +27,4 @@ var busyWork = function () {
   for(var i = 0; i < 10000000; i ++) {
     busyCount += 1;
   };
-}
+};
