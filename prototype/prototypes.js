@@ -42,7 +42,7 @@ inherits(Animal, Lion);
 inherits(Animal, Capybara);
 
 Lion.prototype.roar = function () {
-  console.log('I am an animal and I can roar.');
+  console.log('I am an Lion and I can roar.');
 };
 
 Capybara.prototype.lounge = function () {

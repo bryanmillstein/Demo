@@ -11,7 +11,10 @@ function Lion (name, age, color, size) {
   this.size = size;
 };
 
-// function Lion (name, age, color, size){
-//   Animal.call(this, name, age, color);
-//   this.size = size;
-// };
+// A DRY approach using JavaScript's 'call' function to use the 'Animal' constructor
+// to set the matching attributes for the 'Lion' construcotr.  
+
+function Lion (name, age, color, size){
+  Animal.call(this, name, age, color);
+  this.size = size;
+};
