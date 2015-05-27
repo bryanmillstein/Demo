@@ -16,7 +16,10 @@ wickedWitch.banishAnimal = king.banishAnimal;
 
 wickedWitch.banishAnimal(); // --> 'I have undefined power and I banish you.''
 
-// This is another situation where 'this' is being set to the window.
-// We can solve this by binding our own context when the variable is being declared.
+// In this situation,'this' is set to the wickedWitch. If we want the witch to
+// also be able to borrow the king's power, we can use bind and pass the king as
+// our context.
 
 wickedWitch.banishAnimal = king.banishAnimal.bind(king);
+
+wickedWitch.banishAnimal(); // --> 'I have Unlimited power and I banish you.''
