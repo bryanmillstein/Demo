@@ -39,6 +39,7 @@ inherits(Animal, Lion);
 // Call the inherits function to set the Capybara's prototype to an Animal object.
 // This will give all future instantiated Capybara's access to the Animal's
 // properties.
+
 inherits(Animal, Capybara);
 
 Lion.prototype.roar = function () {
